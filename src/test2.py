@@ -17,9 +17,7 @@ def test_login(phone_number):
         'relativeId1':'channel',
         'relativeId2':'user_id'
     }
-    customerDTO = service.sellerLogin(None, phone_number, "000000", device_info_dto)
-    print(customerDTO.phoneNumber)
-
+    service.sellerLogin(None, phone_number, "000000", device_info_dto)
 
 ppservers = ()
 if len(sys.argv) > 1:
@@ -34,9 +32,9 @@ start_time = time.time()
 inputs = ('13910625431','15727326906')
 jobs = [(input, job_server.submit(test_login,(input,))) for input in inputs]
 for input, job in jobs:
-    print("test_login", input, "is", '')
+    print("test_login", input, "is", job())
 
 print("Time elapsed: ", time.time() - start_time, "s")
-#job_server.print_stats()
+job_server.print_stats()
 
 
