@@ -10,8 +10,4 @@ class _const:
 import sys
 sys.modules[__name__] = _const()
 
-_const.SERVICEFACTORY = 'com.x.mymall.andrclient.ServiceFactory'
-_const.SERVICE_BASE_URL = 'https://dev.188yd.com/services/'
-_const.ACCOUNTSERVICE = 'com.x.mymall.account.contract.service.AccountService'
-_const.DEVICEINFODTO = 'com.x.mymall.account.contract.dto.DeviceInfoDTO'
-_const.CUSTOMERDTO = 'com.x.mymall.account.contract.dto.CustomerDTO'
+_const.ACCOUNT_SERVICE = 'https://dev.188yd.com/services/AccountService'
